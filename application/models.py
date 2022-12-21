@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, Text, Date
 from enum import Enum
 from application.database import Base
 
@@ -21,8 +21,8 @@ class Blog(Base):
     title = Column(String(255))
     description = Column(String(255))
     image = Column(String(255))
-    date = Column(String())
-    timezone = Column(String())
+    date = Column(Date)
+    timezone = Column(String(120)) #хз пока
 
 
 class Vacancies(Base):
@@ -30,7 +30,8 @@ class Vacancies(Base):
 
     id = Column(Integer, primary_key=True)
     title = Column(String(255))
-    phone = Column(String(20)) #??
+    phone_one = Column(String(20))
+    phone_two = Column(String(20))
     email = Column(String(255))
 
 
@@ -45,14 +46,15 @@ class Addresses(Base):
     __tablename__ = "footer_addresses"
 
     id = Column(Integer, primary_key=True)
-    address = Column(String)
+    address = Column(Text)
 
 
 class Objects(Base):
     __tablename__ = "footer_objects"
 
     id = Column(Integer, primary_key=True)
-    object = Column(String)
+    icon = Column(String(255))
+    link = Column(String(255))
 
 
 class TableName(str, Enum):
