@@ -1,14 +1,14 @@
 from sqlalchemy.orm import Session
 
-from . import models, schemas
+from . import dto
 
 tags = {
-    "banner": models.MainPageBanner,
-    "blog": models.Blog,
-    "vacancies": models.Vacancies,
-    "phone": models.Phones,
-    "addresses": models.Addresses,
-    "objects": models.Objects
+    "banner": dto.MainPageBanner,
+    "blog": dto.Blog,
+    "vacancies": dto.Vacancies,
+    "phone": dto.Phones,
+    "addresses": dto.Addresses,
+    "objects": dto.Objects
 }
 
 

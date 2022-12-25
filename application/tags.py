@@ -20,18 +20,6 @@ tags_metadata = [
     {
         "name": "Get by id",
         "description": "Get string from table by id"
-    },
-    {
-        "name": "Post",
-        "description": "Add new string into the table"
-    },
-    {
-        "name": "Update",
-        "description": "Update the string in the table"
-    },
-    {
-        "name": "Delete",
-        "description": "Delete the string from the table"
     }
 ]
 description = """
@@ -41,8 +29,6 @@ You will be able to:
 
 * **Get data from tables**
 * **Get data with id from tables**
-* **Edit data with id**
-* **Delete data with id**
 
 **Available tables:**
 * _banner_
