@@ -1,7 +1,5 @@
 from sqlalchemy.orm import Session
 
-from . import dto
-
 
 # Получить все данные из таблицы из словаря tags
 def get_all(db: Session, key):
