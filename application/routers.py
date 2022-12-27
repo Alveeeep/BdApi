@@ -51,20 +51,20 @@ def get_id_blog(id: int, db: Session = Depends(get_db)):
 
 
 @router.get(path + "/vacancies/{id}", tags=["Get by id"], response_model=schemas.Vacancies)
-def get_id_vacancies(id, db: Session = Depends(get_db)):
+def get_id_vacancies(id: int, db: Session = Depends(get_db)):
     return crud.get_by_id(db, models.Vacancies, id)
 
 
 @router.get(path + "/footer_phones/{id}", tags=["Get by id"], response_model=schemas.Phones)
-def get_id_phones(id, db: Session = Depends(get_db)):
+def get_id_phones(id: int, db: Session = Depends(get_db)):
     return crud.get_by_id(db, models.Phones, id)
 
 
 @router.get(path + "/footer_addresses/{id}", tags=["Get by id"], response_model=schemas.Addresses)
-def get_id_addresses(id, db: Session = Depends(get_db)):
+def get_id_addresses(id: int, db: Session = Depends(get_db)):
     return crud.get_by_id(db, models.Addresses, id)
 
 
 @router.get(path + "/footer_objects/{id}", tags=["Get by id"], response_model=schemas.Objects)
-def get_id_objects(id, db: Session = Depends(get_db)):
+def get_id_objects(id: int, db: Session = Depends(get_db)):
     return crud.get_by_id(db, models.Objects, id)
