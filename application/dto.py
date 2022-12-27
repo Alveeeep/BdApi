@@ -2,21 +2,23 @@ from . import models
 
 
 class MainPageBanner():
-    id = models.MainPageBanner.id
-    title = models.MainPageBanner.title
-    description = models.MainPageBanner.description
-    image_left = models.MainPageBanner.image_left
-    image_right = models.MainPageBanner.image_right
-    background_color = models.MainPageBanner.background_color
+    main_model = models.MainPageBanner
+    id = main_model.id
+    title = main_model.title
+    description = main_model.description
+    image_left = main_model.image_left
+    image_right = main_model.image_right
+    background_color = main_model.background_color
 
 
 class Blog():
-    id = models.Blog.id
-    title = models.Blog.title
-    description = models.Blog.description
-    image = models.Blog.image
-    date = models.Blog.date
-    timezone = models.Blog.timezone
+    main_model = models.Blog
+    id = main_model.id
+    title = main_model.title
+    description = main_model.description
+    image = main_model.image
+    date = main_model.date
+    timezone = main_model.timezone
 
 
 class Vacancies():
