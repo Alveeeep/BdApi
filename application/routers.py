@@ -41,12 +41,12 @@ def get_all_vacancies(db: Session = Depends(get_db)):
 
 
 @router.get(path + "/banner/{id}", tags=["Get by id"], response_model=schemas.MainPageBanner)
-def get_id_banner(id, db: Session = Depends(get_db)):
+def get_id_banner(id: int, db: Session = Depends(get_db)):
     return crud.get_by_id(db, models.MainPageBanner, id)
 
 
 @router.get(path + "/blog/{id}", tags=["Get by id"], response_model=schemas.Blog)
-def get_id_blog(id, db: Session = Depends(get_db)):
+def get_id_blog(id: int, db: Session = Depends(get_db)):
     return crud.get_by_id(db, models.Blog, id)
 
 
