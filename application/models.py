@@ -11,7 +11,7 @@ class MainPageBanner(Base):
     description = Column(String(255))
     image_left = Column(String(255))
     image_right = Column(String(255))
-    background_color = Column(String(10))
+    background_color = Column(String(20))
 
 
 class Blog(Base):
@@ -22,7 +22,7 @@ class Blog(Base):
     description = Column(String(255))
     image = Column(String(255))
     date = Column(Date)
-    timezone = Column(String(120)) #хз пока
+    timezone = Column(String(120))
 
 
 class Vacancies(Base):

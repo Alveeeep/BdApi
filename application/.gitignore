@@ -1,4 +1,4 @@
 *.env
 *.yaml
-schemas.py
 .idea
+dto.py
