@@ -1,5 +1,5 @@
 *.env
 *.yaml
-idea/
+.idea/
 application/dto.py
 __pycache__/
