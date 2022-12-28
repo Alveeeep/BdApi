@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Text, Date
+from sqlalchemy import Column, Integer, String, Text, TIMESTAMP
 from enum import Enum
 from application.database import Base
 
@@ -21,8 +21,7 @@ class Blog(Base):
     title = Column(String(255))
     description = Column(String(255))
     image = Column(String(255))
-    date = Column(Date)
-    timezone = Column(String(120))
+    date = Column(TIMESTAMP)
 
 
 class Vacancies(Base):

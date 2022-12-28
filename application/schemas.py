@@ -21,7 +21,6 @@ class Blog(MainModel):
     description: Optional[str]
     image: Optional[str]
     date: Optional[str]
-    timezone: Optional[str]
 
 
 class Vacancies(MainModel):
