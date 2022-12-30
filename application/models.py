@@ -1,6 +1,6 @@
-from sqlalchemy import Column, Integer, String, Text, TIMESTAMP
+from sqlalchemy import Column, Integer, String, Text, TIMESTAMP, BIGINT
 from enum import Enum
-from application.database import Base
+from database import Base
 
 
 class MainPageBanner(Base):
@@ -8,10 +8,9 @@ class MainPageBanner(Base):
 
     id = Column(Integer, primary_key=True)
     title = Column(String(255))
-    description = Column(String(255))
+    description = Column(Text)
     image_left = Column(String(255))
     image_right = Column(String(255))
-    background_color = Column(String(20))
 
 
 class Blog(Base):
@@ -19,7 +18,7 @@ class Blog(Base):
 
     id = Column(Integer, primary_key=True)
     title = Column(String(255))
-    description = Column(String(255))
+    description = Column(Text)
     image = Column(String(255))
     date = Column(TIMESTAMP)
 
@@ -56,6 +55,39 @@ class Objects(Base):
     link = Column(String(255))
 
 
+class Promotions(Base):
+    __tablename__ = "current_promotions"
+
+    id = Column(Integer, primary_key=True)
+    title = Column(String(255))
+    description = Column(Text)
+    image = Column(String(255))
+    date = Column(TIMESTAMP)
+
+
+class PickUpPoints(Base):
+    __tablename__ = "pick_up_points"
+
+    id = Column(Integer, primary_key=True)
+    phone1 = Column(Text)
+    phone2 = Column(Text)
+    email = Column(Text)
+    pick_up_points_time_id = Column(BIGINT)
+
+
+class PickUpPointsTimes(Base):
+    __tablename__ = "pick_up_points_times"
+
+    id = Column(Integer, primary_key=True)
+    mon = Column(Text)
+    tue = Column(Text)
+    wen = Column(Text)
+    thu = Column(Text)
+    fri = Column(Text)
+    sat = Column(Text)
+    sun = Column(Text)
+
+
 class TableName(str, Enum):
     banner = "banner"
     blog = "blog"
@@ -63,3 +95,4 @@ class TableName(str, Enum):
     phones = "phone"
     address = "addresses"
     object = "objects"
+    promotions = "promotions"

@@ -3,6 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 from . import tags
+# Ту шнягу с готовой db_data добавлять не буду, гит не одобряет
 
 db_data = tags.get_db_data()
 

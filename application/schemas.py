@@ -10,23 +10,28 @@ class MainModel(BaseModel):
         orm_mode = True
 
 
-class MainPageBanner(MainModel):
+class MainPageBannerDTO(MainModel):
     description: Optional[str]
     image_left: Optional[str]
     image_right: Optional[str]
-    background_color: Optional[str]
 
 
-class Blog(MainModel):
+class BlogDTO(MainModel):
     description: Optional[str]
     image: Optional[str]
     date: Optional[str]
 
 
-class Vacancies(MainModel):
+class VacanciesDTO(MainModel):
     phone_one: Optional[str]
     phone_two: Optional[str]
     email: Optional[str]
+
+
+class PromotionsDTO(MainModel):
+    description: Optional[str]
+    image: Optional[str]
+    date: Optional[str]
 
 
 class Footer(BaseModel):
@@ -36,14 +41,31 @@ class Footer(BaseModel):
         orm_mode = True
 
 
-class Phones(Footer):
+class PhonesDTO(Footer):
     phone: Optional[str]
 
 
-class Addresses(Footer):
+class AddressesDTO(Footer):
     address: Optional[str]
 
 
-class Objects(Footer):
+class ObjectsDTO(Footer):
     icon: Optional[str]
     link: Optional[str]
+
+
+class PickUpPointsDTO(Footer):
+    phone1: Optional[str]
+    phone2: Optional[str]
+    email: Optional[str]
+    pick_up_points_time_id: Optional[int]
+
+
+class PickUpPointsTimesDTO(Footer):
+    mon: Optional[str]
+    tue: Optional[str]
+    wen: Optional[str]
+    thu: Optional[str]
+    fri: Optional[str]
+    sat: Optional[str]
+    sun: Optional[str]

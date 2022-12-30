@@ -34,6 +34,7 @@ You will be able to:
 * _banner_
 * _blog_
 * _vacancies_
+* _promotions_
 * _phones_
 * _address_
 * _object_
