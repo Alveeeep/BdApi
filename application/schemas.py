@@ -54,13 +54,6 @@ class ObjectsDTO(Footer):
     link: Optional[str]
 
 
-class PickUpPointsDTO(Footer):
-    phone1: Optional[str]
-    phone2: Optional[str]
-    email: Optional[str]
-    pick_up_points_time_id: Optional[int]
-
-
 class PickUpPointsTimesDTO(Footer):
     mon: Optional[str]
     tue: Optional[str]
@@ -69,3 +62,11 @@ class PickUpPointsTimesDTO(Footer):
     fri: Optional[str]
     sat: Optional[str]
     sun: Optional[str]
+
+
+class PickUpPointsDTO(Footer):
+    phone1: Optional[str]
+    phone2: Optional[str]
+    email: Optional[str]
+    pick_up_points_time_id: Optional[int]
+    times: list[PickUpPointsTimesDTO]
